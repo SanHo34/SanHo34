@@ -1,0 +1,8 @@
+function updateCompass():
+    wait 2 seconds
+    loop all players:
+        set {_loc} to location of loop-player
+        set x coordinate of {_loc} to {BR.flag.nextborderCenter.x}
+        set z coordinate of {_loc} to {BR.flag.nextborderCenter.z}
+        set loop-player's compass target to {_loc}
+        send "{@p} 나침반이 업데이트 되었습니다" to loop-player
